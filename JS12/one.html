@@ -116,6 +116,8 @@ class Bus extends Car {
     busStop() {
         this.occupiedCapacity += Math.floor(Math.random() * 6);
         this.occupiedCapacity -= Math.floor(Math.random() * 3);// Я спец сделала меньше потому что иногда в минус переваливает
+		// VN: легко решаемо ж:
+		// if (this.occupiedCapacity < 0) this.occupiedCapacity = 0;
     }
 
     travel(distance) {
